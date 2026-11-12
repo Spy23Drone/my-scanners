@@ -14,3 +14,10 @@ for port in ports:
         print(f"[-] Port {port} is closed")
     s.close()
 print("Scan done!")
+
+try:
+    import os
+    os.system('termux-tts-speak "scan complete"')
+    os.system('termux-vibrate -d 500')
+except:
+    pass

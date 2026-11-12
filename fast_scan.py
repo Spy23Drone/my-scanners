@@ -48,3 +48,10 @@ for _ in range(50):
 
 q.join()
 print(f"\nDone! Found {len(open_ports)} open ports: {open_ports}")
+
+try:
+    import os
+    os.system('termux-tts-speak "scan complete"')
+    os.system('termux-vibrate -d 500')
+except:
+    pass
